@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card style="background-color:white; padding:30px;">
+    <v-card max-width="500" style="background-color:yellow; variant=variant">
     <div style="text-align: center; font-size: 30px;">{{this.date}}</div>
     <div style="text-align: center; font-size: 30px;" v-if="this.time === null">
       Current Time: <v-progress-circular indeterminate size="25"></v-progress-circular>

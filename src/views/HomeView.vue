@@ -27,10 +27,11 @@ export default {
   }
   .content {
     position: fixed;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 100%;
+    right: 0;
+    /* background: rgba(0, 0, 0, 0.5); */
+    /* color: #f1f1f1; */
+    /* width: 100%; */
+    /* right: 0px; */
     padding: 20px;
   }
 </style>
