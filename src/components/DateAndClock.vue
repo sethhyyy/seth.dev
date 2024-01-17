@@ -1,14 +1,16 @@
 <template>
   <div>
-    <v-card max-width="500" style="background-color:yellow; variant=variant">
-    <div style="text-align: center; font-size: 30px;">{{this.date}}</div>
-    <div style="text-align: center; font-size: 30px;" v-if="this.time === null">
-      Current Time: <v-progress-circular indeterminate size="25"></v-progress-circular>
+    <div style="font-family: abnes; color: yellow;">
+    <!-- <v-card max-width="500" style="background-color:yellow; font-family:abnes;" variant=variant> -->
+      <div style="text-align: center; font-size: 20px;">{{this.date}}</div>
+      <div style="text-align: center; font-size: 20px;" v-if="this.time === null">
+        <v-progress-circular indeterminate size="25"></v-progress-circular>
+      </div>
+      <div style="text-align: center; font-size: 20px;" v-else>
+        {{ this.time }}
+      </div>
+    <!-- </v-card> -->
     </div>
-    <div style="text-align: center; font-size: 30px;" v-else>
-      Current Time: {{ this.time }}
-    </div>
-  </v-card>
   </div>
 </template>
 
@@ -38,5 +40,8 @@ export default {
 </script>
 
 <style>
-
+  @font-face{
+    font-family: "abnes";
+    src: url("../assets/fonts/abnes.ttf") format("truetype");
+  }
 </style>

@@ -6,7 +6,7 @@
       dark
     >
       <Transition appear>
-        <h2>sethJS.dev</h2>
+        <h2 style="font-family: Misa;">Sethjs.dev</h2>
       </Transition>
       <v-spacer></v-spacer>
       <v-btn
@@ -55,3 +55,9 @@ export default {
 }
 
 </script>
+<style>
+  @font-face {
+    font-family: 'Misa';
+    src: url('../src/assets/fonts/13_Misa.TTF');
+  }
+</style>

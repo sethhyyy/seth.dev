@@ -26,12 +26,12 @@ export default {
     min-height: 100%;
   }
   .content {
-    position: fixed;
+    position: absolute;
+    left: 50%;
+    top: 1%;
+    transform: translate(-50%,0);
+    /* position: fixed;
     right: 0;
-    /* background: rgba(0, 0, 0, 0.5); */
-    /* color: #f1f1f1; */
-    /* width: 100%; */
-    /* right: 0px; */
-    padding: 20px;
+    padding: 20px; */
   }
 </style>
