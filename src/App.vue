@@ -6,7 +6,7 @@
       dark
     >
       <Transition appear>
-        <h2 style="font-family: Misa;">Sethjs.dev</h2>
+        <h2 style="font-family: Misa;">Seth.dev</h2>
       </Transition>
       <v-spacer></v-spacer>
       <v-btn
