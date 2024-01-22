@@ -2,12 +2,15 @@
   <v-app>
     <v-app-bar
       app
-      color="black"
+      color="rgb(0, 0, 0)"
       dark
     >
       <Transition appear>
         <h2 style="font-family: Misa;">Seth.dev</h2>
       </Transition>
+      <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
+      <DateAndClock center></DateAndClock>
       <v-spacer></v-spacer>
       <v-btn
         text
@@ -37,9 +40,13 @@
 
 <script>
 import router from '@/router'
+import DateAndClock from './components/DateAndClock.vue'
 export default {
   name: 'App',
   data () {
+  },
+  components: {
+    DateAndClock
   },
   methods: {
     toHomePage () {

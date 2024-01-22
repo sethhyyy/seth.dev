@@ -7,41 +7,83 @@
         </video>
       </div>
     </div>
-    <div class="DateAndClock">
-      <DateAndClock/>
-    </div>
+    <!-- <div class="DateAndClock"><DateAndClock/></div> -->
     <div class="nav-btn">
       <div class="nav-btn-container">
-        <v-btn style="margin-right: 10px" @click="scrollToVideo" outlined>Video</v-btn>
-        <v-btn style="margin-right: 10px" @click="scrollToSecond" outlined>About</v-btn>
-        <v-btn style="margin-right: 10px" @click="scrollToThird" outlined>Works</v-btn>
+        <v-btn v-bind:color="Y_Scroll >= 0 && Y_Scroll < 713 ? 'yellow' : 'transparent'" style="margin-right: 10px;" @click="scrollToVideo">Video</v-btn>
+        <v-btn v-bind:color="Y_Scroll >= 713 && Y_Scroll < 1552 ? 'yellow' : 'transparent'" style="margin-right: 10px" @click="scrollToSecond">Backgrounds</v-btn>
+        <v-btn v-bind:color="Y_Scroll >= 1552 && Y_Scroll < 2455 ? 'yellow' : 'transparent'" style="margin-right: 10px" @click="scrollToThird">Works</v-btn>
+        <v-btn v-bind:color="Y_Scroll >= 2455 ? 'yellow' : 'transparent'" style="margin-right: 10px" @click="scrollToForth">Stacks</v-btn>
       </div>
     </div>
-    <div class="About">
-      <div>About Section (ยังไม่ทำ)</div>
-    </div>
-    <div class="Works">
-      <div>Works Section (ยังไม่ทำ)</div>
-    </div>
+    <div class="Backgrounds"><div>Backgrounds Section</div></div>
+    <div class="Works"><div>Works Section (ยังไม่ทำ)</div></div>
+    <div class="Stacks"><div>Stacks (ยังไม่ทำ)</div></div><div class="Works"><div>Works Section (ยังไม่ทำ)</div></div>
   </div>
 </template>
 
 <script>
-import DateAndClock from '../components/DateAndClock.vue'
+// import DateAndClock from '../components/DateAndClock.vue'
 export default {
-  components: {
-    DateAndClock
+  data () {
+    return {
+      Y_Scroll: 0,
+      video_btn: 1,
+      background_btn: 1,
+      works_btn: 1,
+      stacks_btn: 1
+    }
   },
+  // components: {
+  //   DateAndClock
+  // },
   methods: {
     scrollToVideo () {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     },
     scrollToSecond () {
-      window.scrollTo({ top: 932, behavior: 'smooth' })
+      window.scrollTo({ top: 885, behavior: 'smooth' })
     },
     scrollToThird () {
-      window.scrollTo({ top: 1864, behavior: 'smooth' })
+      window.scrollTo({ top: 1770, behavior: 'smooth' })
+    },
+    scrollToForth () {
+      window.scrollTo({ top: 2655, behavior: 'smooth' })
+    },
+    onScroll (e) {
+      this.Y_Scroll = window.top.scrollY
     }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.onScroll)
+    // window.addEventListener('keyup', function (event) {
+    //   if (event.code === 'ArrowDown') {
+    //     if (scrollY >= 0 && scrollY < 885) {
+    //       window.scrollTo({ top: 885, behavior: 'smooth' })
+    //     } else if (scrollY >= 885 && scrollY < 1770) {
+    //       window.scrollTo({ top: 1770, behavior: 'smooth' })
+    //     } else if (scrollY >= 1770 && scrollY < 2655) {
+    //       window.scrollTo({ top: 2655, behavior: 'smooth' })
+    //     } else if (scrollY >= 2655 && scrollY < 3540) {
+    //       window.scrollTo({ top: 3540, behavior: 'smooth' })
+    //     } else if (scrollY >= 3540) {
+    //       window.scrollTo({ top: 3540, behavior: 'smooth' })
+    //     }
+    //   } else if (event.code === 'ArrowUp') {
+    //     if (scrollY >= 2655 && scrollY <= 3540) {
+    //       window.scrollTo({ top: 2655, behavior: 'smooth' })
+    //     } else if (scrollY >= 1770 && scrollY <= 2655) {
+    //       window.scrollTo({ top: 1770, behavior: 'smooth' })
+    //     } else if (scrollY >= 885 && scrollY <= 1770) {
+    //       window.scrollTo({ top: 885, behavior: 'smooth' })
+    //     } else if (scrollY >= 0 && scrollY <= 885) {
+    //       window.scrollTo({ top: 0, behavior: 'smooth' })
+    //     }
+    //   }
+    // })
+  },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.onScroll)
   }
 }
 </script>
@@ -54,7 +96,7 @@ export default {
     scroll-behavior: smooth;
     /* scroll-snap-type: y mandatory;
     overflow-y: scroll; */
-    height: 500vh;
+    height: 380vh;
   }
   .v-container {
     display: block;
@@ -71,22 +113,34 @@ export default {
   }
   .homepage_video {
     width: 100%;
-    height: 100vh;
+    height: 95vh;
     object-fit: cover
   }
-  .About {
+  .Backgrounds {
     position: static;
-    margin-top: 100vh;
-    background-color: rgb(233, 214, 41);
+    margin-top: 95vh;
+    background-color: white;
+    display: block;
+    /* background-color: rgb(233, 214, 41); */
     width: 100%;
-    height: 100vh;
+    height: 95vh;
+  }
+  .Backgrounds-Topic {
+    display: inline-block;
+    margin: 50px 100px;
   }
   .Works {
     position: static;
     /* margin-top: 96vh; */
-    background-color: gray;
+    background-color: rgb(0, 0, 0);
     width: 100%;
-    height: 100vh;
+    height: 95vh;
+  }.Stacks {
+    position: static;
+    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(233, 214, 41); */
+    width: 100%;
+    height: 95vh;
   }
   .DateAndClock {
     position: fixed;
