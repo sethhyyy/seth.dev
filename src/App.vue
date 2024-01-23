@@ -8,9 +8,9 @@
       <Transition appear>
         <h2 style="font-family: Misa;">Seth.dev</h2>
       </Transition>
+      <!-- <v-spacer></v-spacer>
       <v-spacer></v-spacer>
-      <v-spacer></v-spacer>
-      <DateAndClock center></DateAndClock>
+      <DateAndClock center></DateAndClock> -->
       <v-spacer></v-spacer>
       <v-btn
         text
@@ -40,14 +40,14 @@
 
 <script>
 import router from '@/router'
-import DateAndClock from './components/DateAndClock.vue'
+// import DateAndClock from './components/DateAndClock.vue'
 export default {
   name: 'App',
   data () {
   },
-  components: {
-    DateAndClock
-  },
+  // components: {
+  //   DateAndClock
+  // },
   methods: {
     toHomePage () {
       router.push('/').catch(function () { return {} })

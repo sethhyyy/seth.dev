@@ -2,7 +2,7 @@
   <div>
     <!-- <v-card max-width="500" style="background-color:yellow; variant=variant"> -->
     <div class="text-content">
-      <div style="text-align: center; font-family: abnes; font-size: 20px;">
+      <div style="text-align: center; font-size: 20px;">
         {{this.date}} {{ this.clock_available(this.time) }}
         <v-progress-circular indeterminate size="20" v-if="this.time == null"></v-progress-circular>
       </div>
@@ -49,7 +49,7 @@ export default {
       if (val) {
         return val
       } else {
-        return 'DATA RETRIEVING'
+        return 'PROCESSING...'
       }
     }
   }
