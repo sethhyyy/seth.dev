@@ -2,6 +2,7 @@
   <div class="parent">
     <div class="v-container">
       <div class="video_container">
+      <!-- <div style="position: fixed; color: red">{{ Y_Scroll   }}</div> -->
       <div class="welcome_video_text">PORTFOLIO</div>
       <div class="welcome_video_subtext">
         *THIS IS NON-PROFIT WEBSITE WHICH WAS CREATE BY JavaScript Programmer, Setthaphong "Seth" Songjaroen.<br/>
@@ -70,6 +71,10 @@ export default {
     },
     onScroll (e) {
       this.Y_Scroll = window.top.scrollY
+      // this.backgrounds_header = document.getElementsByClassName('backgrounds_section_header')[0]
+      // if (this.Y_Scroll >= 435 && this.Y_Scroll < 885) {
+      //   document.getElementsByClassName('backgrounds_section_header')[0].style.animation = 'fadeIn 2s;'
+      // }
     }
   },
   mounted () {
@@ -165,6 +170,7 @@ export default {
     text-transform: uppercase;
     position: absolute;
     top: 95vh;
+    /* left: -40%; */
     font-size: 100px;
   }
   .Works {
@@ -238,6 +244,10 @@ export default {
       margin-left: 0%;
       width: 100%;
     }
+  } */
+  /* @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   } */
   @font-face {
     font-family: 'LEDLIGHT';
