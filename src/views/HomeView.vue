@@ -8,7 +8,7 @@
         *THIS IS NON-PROFIT WEBSITE WHICH WAS CREATE BY JavaScript Programmer, Setthaphong "Seth" Songjaroen.<br/>
         PURPOSELY MADE FOR SELF-INTRODUCTION. AS YOU'RE SCROLL THROUGH YOU WOULD KNOW: <br/> 1. MY BRIEFLY BACKGROUNDS 2. WORKS/PROJECTS I'VE WORKED/BEEN WORKING FOR 3. MY STACKS
       </div>
-        <video autoplay loop muted class="homepage_video">
+        <video autoplay loop muted playsinline preload="auto" class="homepage_video">
           <source src="../assets/video/homepage_portfolio_video_playback.mp4" type="video/mp4">
         </video>
       </div>
